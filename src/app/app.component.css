@@ -1,0 +1,231 @@
+.wrapper {
+  /* background: transparent; */
+  /* margin: 10px; */
+  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
+  min-height: 100vh;
+  /* border-radius: 15px; */
+  display: flex;
+  overflow: hidden;
+}
+.l-side-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 320px;
+  padding: 10px 0px;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+  z-index: 5;
+  height: fit-content;
+  background: #fff;
+  border-bottom-right-radius: 15px;
+}
+.l-side-bar .logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 15px;
+  margin: 20px 0px;
+}
+.l-side-bar .logo-section .img {
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-weight: bolder;
+}
+.l-side-bar .logo-section .title {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.l-side-bar .navs ul {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 25px;
+  padding-left: 15px;
+}
+.l-side-bar .navs ul li {
+  list-style: none;
+  text-transform: capitalize;
+  display: flex;
+  gap: 15px;
+  padding: 0px 10px;
+  font-size: 16px;
+  color: #999;
+  transition: 0.3s;
+  margin: 10px 0px;
+}
+.l-side-bar .navs ul .nav-item.active,
+.l-side-bar .navs ul .nav-item:hover {
+  border-right: 3px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.l-side-bar .navs ul .nav-item.active .item a,
+.l-side-bar .navs ul .nav-item:hover .item a {
+  color: #000;
+  font-weight: 500;
+}
+.l-side-bar .navs ul .nav-item.active .icon i,
+.l-side-bar .navs ul .nav-item:hover .icon i {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+.l-side-bar .navs ul .nav-item .icon {
+  position: relative;
+}
+.l-side-bar .navs ul .nav-item .icon span {
+  position: absolute;
+  top: -2px;
+  right: -7px;
+  font-size: 10px;
+  padding: 0px 3px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+.l-side-bar .navs ul .nav-item .icon i {
+  font-size: 18px;
+}
+.l-side-bar .navs ul li .item a {
+  text-decoration: none;
+  color: #777;
+}
+.l-side-bar .upgrade {
+  background: #eeeeeea3;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+.l-side-bar .upgrade .img {
+  height: 30px;
+}
+.l-side-bar .upgrade .img img {
+  width: 90px;
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.l-side-bar .upgrade p {
+  margin: 15px 0px;
+  font-size: 14px;
+  color: #777;
+  text-transform: capitalize;
+}
+.l-side-bar .upgrade button {
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+.r-side-bar {
+  width: 400px;
+  background: #fff;
+  padding: 15px;
+}
+.r-side-bar .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.r-side-bar .header i {
+  font-size: 20px;
+}
+.r-side-bar .user-detail {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: capitalize;
+  margin: 25px 0px;
+}
+.r-side-bar .user-detail .avatar {
+  background: #f4f4f4;
+  width: fit-content;
+  border-radius: 50%;
+  position: relative;
+}
+.r-side-bar .user-detail .avatar img {
+  width: 100px;
+  background: #fff;
+  margin: 5px;
+  border-radius: 50%;
+  padding: 5px;
+}
+.r-side-bar .user-detail .avatar::after {
+  content: "+";
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  background: #2d6efd;
+  color: #fff;
+  padding: 0px 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.r-side-bar .feature {
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
+}
+.r-side-bar .feature .sub-head span {
+  background: #eee;
+  padding: 10px;
+  border-radius: 10px;
+}
+.r-side-bar .feature .desc {
+  font-size: 14px;
+  text-transform: capitalize;
+  width: -webkit-fill-available;
+  padding: 0px 10px;
+}
+.r-side-bar .feature .desc p {
+  font-weight: 600;
+}
+.r-side-bar .feature .desc span {
+  color: #999;
+}
+.r-side-bar .feature .progress {
+  width: 50%;
+  height: 4px;
+}
+.r-side-bar .reminder .card {
+  border: 0;
+  margin: 25px 0px;
+  display: flex;
+  flex-direction: initial;
+  align-items: center;
+}
+.r-side-bar .reminder .header i {
+  position: relative;
+}
+.r-side-bar .reminder .header i::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  background: #e54a45;
+  top: 5px;
+  right: 2px;
+  height: 7px;
+  border-radius: 50%;
+}
+.r-side-bar .reminder .card .icon i {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.r-side-bar .reminder .card .desc {
+  font-size: 14px;
+  margin: 0px 15px;
+}
+.r-side-bar .reminder .card .desc p {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.r-side-bar .reminder .card .desc span {
+  color: #999;
+  font-weight: 500;
+}

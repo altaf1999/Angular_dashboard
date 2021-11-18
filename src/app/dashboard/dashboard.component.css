@@ -1,0 +1,188 @@
+.main {
+  background: #eeeeee5e;
+  width: 100%;
+}
+.main nav {
+  padding: 15px;
+  /* background: #fff; */
+}
+.main nav .navbar-brand {
+  color: #333;
+  font-weight: 500;
+}
+.main nav form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+.main nav form p {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.main nav form .search i {
+  background: #587bfd3b;
+  padding: 7px 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.welcome {
+  background: #dc354526;
+  border-radius: 15px;
+  text-align: center;
+  padding: 15px 0px;
+  margin: 25px 15px;
+}
+.welcome p {
+  color: #555;
+  font-size: 16px;
+}
+.graph {
+  margin: 25px 15px;
+}
+.graph .result {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 5%);
+}
+.graph .result .title {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+.graph .result .title a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+.graph .result .title a i {
+  padding-left: 5px;
+}
+.graph .result .unit {
+  display: flex;
+  border-bottom: 2px solid #eee;
+  padding: 15px 0px;
+  margin: 10px 0px;
+}
+.graph .result .unit p {
+  display: flex;
+  width: -webkit-fill-available;
+  text-transform: capitalize;
+  font-size: 13px;
+  font-weight: 500;
+}
+.graph .result .unit .progress-b {
+  width: -webkit-fill-available;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.graph .result .unit .progress-b .progress {
+  width: inherit;
+  height: 6px !important;
+}
+.graph .result .unit .progress-b span {
+  font-size: 12px;
+  font-weight: 600;
+}
+.graph .learning-time {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 5%);
+}
+.graph .learning-time .title {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+.graph .learning-time .title select {
+  outline: none;
+  border: 0;
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+.graph .learning-time .unit {
+  width: fit-content;
+}
+.graph .learning-time .unit .progress {
+  height: 200px;
+  width: 7px;
+  margin: auto;
+  margin-top: 15px;
+  display: block;
+}
+.graph .learning-time .unit span {
+  font-size: 12px;
+  font-weight: bold;
+}
+.graph .learning-time .x-axis {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 25px 0px 15px 0px;
+}
+.graph .learning-time .x-axis label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.graph .learning-time .x-axis label p {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.graph .learning-time .x-axis label span {
+  font-size: 14px;
+  color: #999;
+  text-transform: capitalize;
+}
+.graph .courses {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 5%);
+  margin: 15px 0px;
+}
+.graph .courses .title {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+.graph .courses .title a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+.graph .courses .title a i {
+  padding-left: 5px;
+}
+.graph .courses .card {
+  color: #fff;
+  border: 0;
+  padding: 25px;
+  border-radius: 25px;
+  text-transform: capitalize;
+}
+.graph .courses .card p {
+  color: #ddd;
+  font-size: 14px;
+  font-weight: 600;
+}
+.graph .courses .card strong {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+.graph .courses .card .sub-head span {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+}
