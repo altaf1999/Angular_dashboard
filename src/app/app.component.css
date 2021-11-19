@@ -7,6 +7,10 @@
   display: flex;
   overflow: hidden;
 }
+.main {
+  background: #eeeeee5e;
+  width: 70%;
+}
 .l-side-bar {
   display: flex;
   flex-direction: column;
@@ -57,6 +61,7 @@
   color: #999;
   transition: 0.3s;
   margin: 10px 0px;
+  cursor: pointer;
 }
 .l-side-bar .navs ul .nav-item.active,
 .l-side-bar .navs ul .nav-item:hover {

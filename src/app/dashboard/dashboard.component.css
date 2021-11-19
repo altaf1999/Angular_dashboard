@@ -1,26 +1,22 @@
-.main {
-  background: #eeeeee5e;
-  width: 100%;
-}
-.main nav {
+nav {
   padding: 15px;
   /* background: #fff; */
 }
-.main nav .navbar-brand {
+nav .navbar-brand {
   color: #333;
   font-weight: 500;
 }
-.main nav form {
+nav form {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 10px;
 }
-.main nav form p {
+nav form p {
   font-size: 14px;
   text-transform: capitalize;
 }
-.main nav form .search i {
+nav form .search i {
   background: #587bfd3b;
   padding: 7px 10px;
   border-radius: 10px;

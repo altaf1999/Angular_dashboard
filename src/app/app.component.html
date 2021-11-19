@@ -1,54 +1,25 @@
 <div class="wrapper">
-  <div class="l-side-bar">
+  <div class="l-side-bar" *ngFor="let head of master.header">
     <div class="logo-section">
       <div class="img">L</div>
       <div class="title">
-        <h4>logo</h4>
+        <h4>{{head.logo}}</h4>
       </div>
     </div>
     <div class="navs">
       <ul>
-        <li class="nav-item" routerLinkActive="active" routerLink="/dashboard">
+        <li *ngFor="let links of head.navigation" class="nav-item" [routerLinkActive]="links.routelink"
+          [routerLink]="links.route">
           <div class="icon">
-            <i class="fa fa-th-large"></i><span class="bg-danger text-white"></span>
+            <i [class]="links.icon"></i><span class="bg-danger text-white">{{links.notify}}</span>
           </div>
-          <div class="item"><a>dashboard</a></div>
-        </li>
-        <li class="nav-item" routerLinkActive="active" routerLink="/class">
-          <div class="icon">
-            <i class="fa fa-folder-o"></i><span class="bg-danger text-white"></span>
-          </div>
-          <div class="item"><a>classes</a></div>
-        </li>
-        <li class="nav-item">
-          <div class="icon">
-            <i class="fa fa-book"></i><span class="bg-danger text-white"></span>
-          </div>
-          <div class="item"><a routerLinkActive="active">resources</a></div>
-        </li>
-        <li class="nav-item">
-          <div class="icon">
-            <i class="fa fa-calendar-o"></i><span class="bg-danger text-white"></span>
-          </div>
-          <div class="item"><a routerLinkActive="active">learning plan</a></div>
-        </li>
-        <li class="nav-item">
-          <div class="icon">
-            <i class="fa fa-comment-o"></i><span class="bg-danger text-white">4</span>
-          </div>
-          <div class="item"><a routerLinkActive="active">chat</a></div>
-        </li>
-        <li class="nav-item">
-          <div class="icon">
-            <i class="fa fa-cog"></i><span class="bg-danger text-white"></span>
-          </div>
-          <div class="item"><a routerLinkActive="active">setting</a></div>
+          <div class="item"><a>{{links.title}}</a></div>
         </li>
       </ul>
     </div>
     <div class="upgrade">
       <div class="img">
-        <img src="../assets/upgrade.png" alt="" />
+        <img [src]="head.upgrade" alt="" />
       </div>
       <p>
         upgrade to <strong class="text-upper text-dark">pro</strong> for
@@ -57,40 +28,29 @@
       <button class="btn btn-primary">upgrade</button>
     </div>
   </div>
-  <router-outlet></router-outlet>
+  <div class="main">
+    <router-outlet></router-outlet>
+  </div>
 
-  <div class="r-side-bar">
+  <div class="r-side-bar" *ngFor="let head of master.user">
     <div class="header">
       <h5>Logout</h5>
       <i class="bi bi-box-arrow-in-right light-text"></i>
     </div>
     <div class="user-detail">
       <div class="avatar">
-        <img src="../assets/avatar.png" alt="">
+        <img [src]="head.avatar" alt="">
       </div>
-      <strong class="mt-4">anna morrison</strong>
-      <span class="light-text">Student</span>
+      <strong class="mt-4">{{head.username}}</strong>
+      <span class="light-text">{{head.usertype}}</span>
     </div>
-    <div class="feature">
+    <div class="feature" *ngFor="let feature of head.features">
       <div class="sub-head">
-        <span>B2</span>
+        <span>{{feature.title}}</span>
       </div>
       <div class="desc">
-        <p>english</p>
-        <span>high intermediate</span>
-      </div>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
-          aria-valuemax="100"></div>
-      </div>
-    </div>
-    <div class="feature">
-      <div class="sub-head">
-        <span>C1</span>
-      </div>
-      <div class="desc">
-        <p>spanish</p>
-        <span>advanced</span>
+        <p>{{feature.sub}}</p>
+        <span>{{feature.type}}</span>
       </div>
       <div class="progress">
         <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
@@ -102,31 +62,13 @@
         <h5>Reminders</h5>
         <i class="bi bi-bell light-text"></i>
       </div>
-      <div class="card">
+      <div class="card" *ngFor="let reminder of head.reminders">
         <div class="icon">
-          <i class="bi bi-info-circle bg-danger-light text-danger"></i>
+          <i [class]="reminder.status"></i>
         </div>
         <div class="desc">
-          <p>Eng-Vocabulary test</p>
-          <span>24 Sep 2019, Friday</span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="icon">
-          <i class="bi bi-info-circle bg-secondary-light text-primary"></i>
-        </div>
-        <div class="desc">
-          <p>Eng-Vocabulary test</p>
-          <span>24 Sep 2019, Friday</span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="icon">
-          <i class="bi bi-info-circle bg-secondary-light text-primary"></i>
-        </div>
-        <div class="desc">
-          <p>Eng-Vocabulary test</p>
-          <span>24 Sep 2019, Friday</span>
+          <p>{{reminder.title}}</p>
+          <span>{{reminder.date}}, {{reminder.day}}</span>
         </div>
       </div>
     </div>

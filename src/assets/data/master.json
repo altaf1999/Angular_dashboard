@@ -1,0 +1,91 @@
+{
+    "header": [
+        {
+          "logo": "Company",
+          "upgrade": "../assets/upgrade.png",
+          "navigation": [
+            {
+              "route": "/dashboard",
+              "title": "dashboard",
+              "icon":"fa fa-th-large",
+              "notify":"",
+              "routelink":"active"
+            },
+            {
+              "route": "/class",
+              "title": "classes",
+              "icon":"fa fa-folder-o",
+              "notify":"",
+              "routelink":"active"
+            },
+            {
+              "route": "/test",
+              "title": "resources",
+              "icon":"fa fa-book",
+              "notify":"",
+              "routelink":"active"
+            },
+            {
+              "route": "/test",
+              "title": "learning plan",
+              "icon":"fa fa-calendar-o",
+              "notify":"4",
+              "routelink":"active"
+            },
+            {
+              "route": "/test",
+              "title": "chat",
+              "icon":"fa fa-comment-o",
+              "notify":"",
+              "routelink":"active"
+            },
+            {
+              "route": "/test",
+              "title": "setting",
+              "icon":"fa fa-cog",
+              "notify":"",
+              "routelink":"active"
+            }
+          ]
+        }
+      ],
+    "user":[
+         { 
+            "avatar":"../assets/avatar.png",
+            "username":"anna morrison",
+            "usertype":"Student",
+            "features":[
+                {
+                    "title":"B2",
+                    "sub":"english",
+                    "type":"high intermediate"
+                },
+                {
+                    "title":"C1",
+                    "sub":"spanish",
+                    "type":"advanced"
+                }
+            ],
+            "reminders":[
+                {
+                    "title":"Eng-Vocabulary test",
+                    "date":"24 Sep 2019",
+                    "day":"Friday",
+                    "status":"bi bi-info-circle bg-danger-light text-danger"
+                },
+                {
+                    "title":"Eng-Vocabulary test",
+                    "date":"24 Sep 2019",
+                    "day":"Friday",
+                    "status":"bi bi-info-circle bg-secondary-light text-primary"
+                },
+                {
+                    "title":"Eng-Vocabulary test",
+                    "date":"24 Sep 2019",
+                    "day":"Friday",
+                    "status":"bi bi-info-circle bg-secondary-light text-primary"
+                }
+            ]
+        }
+      ]
+}

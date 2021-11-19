@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, } from '@angular/core';
+import { MasterService } from './master.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dashboard';
+
+  constructor(private service:MasterService) {}
+  master:any=[];
+  ngOnInit(){
+    this.service.getData().subscribe(data => this.master=data);
+  };
+ 
 }
